@@ -4,6 +4,7 @@ import pytest
 
 from app.bookings.dao import BookingDAO
 
+
 @pytest.mark.parametrize("user_id, room_id", [
     (2,2),
     (2,3),

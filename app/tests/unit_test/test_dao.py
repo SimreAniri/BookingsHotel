@@ -1,5 +1,7 @@
 import pytest
+
 from app.users.dao import UsersDAO
+
 
 @pytest.mark.asyncio 
 @pytest.mark.parametrize("email,is_exist", [

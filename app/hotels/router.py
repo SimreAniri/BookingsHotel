@@ -1,10 +1,10 @@
 from datetime import date
-from fastapi import APIRouter
-from app.exceptions import InvalidBookingDateExeption
 
+from fastapi import APIRouter
+
+from app.exceptions import InvalidBookingDateExeption
 from app.hotels.dao import HotelsDAO
 from app.hotels.schemas import SHotels, SLeftRoomsInHotels
-
 
 router = APIRouter(prefix="/hotels", tags=["Отели"])
 

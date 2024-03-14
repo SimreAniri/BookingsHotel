@@ -1,14 +1,15 @@
 from typing import TYPE_CHECKING
-from app.database import Base
+
 from sqlalchemy import JSON, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
+from app.database import Base
 
 if TYPE_CHECKING:
     # Убирает предупреждения отсутствия импорта и неприятные подчеркивания в
     # PyCharm и VSCode
-    from app.hotels.models import Hotels
     from app.bookings.models import Bookings
+    from app.hotels.models import Hotels
 
 
 class Rooms(Base):

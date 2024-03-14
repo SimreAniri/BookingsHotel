@@ -1,14 +1,16 @@
 from datetime import datetime
 from typing import TYPE_CHECKING
-from app.database import Base
+
 from sqlalchemy import Computed, Date, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
+
+from app.database import Base
 
 if TYPE_CHECKING:
     # Убирает предупреждения отсутствия импорта и неприятные подчеркивания в
     # PyCharm и VSCode
-    from app.users.models import Users
     from app.hotels.rooms.models import Rooms
+    from app.users.models import Users
 
 
 class Bookings(Base):

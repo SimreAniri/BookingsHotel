@@ -1,6 +1,7 @@
 import pytest
 from httpx import AsyncClient
 
+
 @pytest.mark.parametrize("date_from,date_to,status_code", [
     ("2030-05-01", "2030-05-15", 200),
     ("2030-05-02", "2030-05-16", 200),

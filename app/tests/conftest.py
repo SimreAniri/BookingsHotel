@@ -4,17 +4,16 @@ from datetime import datetime
 
 import pytest_asyncio
 from httpx import AsyncClient
-from app.main import app as fastapi_app
-
 from sqlalchemy import insert
 
 from app.bookings.models import Bookings
 from app.config import settings
 from app.database import Base, async_session_maker, engine
-
 from app.hotels.models import Hotels
 from app.hotels.rooms.models import Rooms
+from app.main import app as fastapi_app
 from app.users.models import Users
+
 
 @pytest_asyncio.fixture(scope="session", autouse=True)
 async def prepare_database():

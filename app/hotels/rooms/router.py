@@ -1,10 +1,9 @@
 from datetime import date
+
 from app.exceptions import InvalidBookingDateExeption
-from app.hotels.rooms.schemas import SRoomsInHotelDate
-
-from app.hotels.router import router
-
 from app.hotels.rooms.dao import RoomsDAO
+from app.hotels.rooms.schemas import SRoomsInHotelDate
+from app.hotels.router import router
 
 
 @router.get("/{hotel_id}/rooms")
