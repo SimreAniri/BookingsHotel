@@ -1,5 +1,6 @@
 from contextlib import asynccontextmanager
-from datetime import time
+import time
+import sentry_sdk
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -34,6 +35,11 @@ async def lifespan(app: FastAPI):
     yield
     # при выключении
 
+sentry_sdk.init(
+    dsn=settings.SENTRY_DSN,
+    traces_sample_rate=1.0,
+    profiles_sample_rate=1.0,
+)
 
 app = FastAPI(title="Бронирование отелей", lifespan=lifespan)
 
