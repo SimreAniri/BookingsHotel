@@ -1,0 +1,14 @@
+.dockerignore
+Dockerfile
+Dockerfile.nginx
+docker-compose.yml
+course_helpers
+README.md
+
+.git
+__pycache__
+venv
+
+.gitignore
+.vscode
+.idea
