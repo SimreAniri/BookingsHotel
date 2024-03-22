@@ -1,4 +1,16 @@
 /.env
 /.pytest_cache
 /venv
-__pycache__
+app/__pycache__
+app/admin/__pycache__
+app/bookings/__pycache__
+app/dao/__pycache__
+app/hotels/__pycache__
+app/hotels/rooms/__pycache__
+app/hotels/__pycache__
+app/hotels/__pycache__
+app/hotels/rooms/__pycache__
+app/images/__pycache__
+app/pages/__pycache__
+app/tasks/__pycache__
+app/users/__pycache__
