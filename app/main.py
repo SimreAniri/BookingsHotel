@@ -18,6 +18,7 @@ from app.database import engine
 from app.hotels.rooms.router import router as router_rooms
 from app.hotels.router import router as router_hotels
 from app.images.router import router as router_images
+from app.import_data.router import router as router_import
 from app.logger import logger
 from app.pages.router import router as router_pages
 from app.users.router import router as router_users
@@ -54,6 +55,7 @@ app.include_router(router_rooms)
 # Включение дополнительных роутеров
 app.include_router(router_pages)
 app.include_router(router_images)
+app.include_router(router_import)
 
 # Подключение CORS
 origins = [
